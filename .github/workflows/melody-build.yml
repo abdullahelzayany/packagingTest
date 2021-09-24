@@ -1,12 +1,14 @@
-name: 'melody-build'
-
+name: Build Melody
+on:
+  push:
+    branches:
+      - master
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		permissions:
-			packages: write
-			content: read
-		steps:
-			-name: Build Image
-				run: |-
-					zip proto.zip shared-protobuf/proto-api/src/main/proto/test.proto
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Zip Folder
+      run: zip -r release.zip .
+    - name: Release to Github
+      run: echo "Release"
