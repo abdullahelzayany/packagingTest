@@ -1,4 +1,4 @@
-name: Build Melody
+name: Melody Deploy
 on:
   push:
     branches:
