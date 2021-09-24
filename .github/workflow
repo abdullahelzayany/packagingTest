@@ -1,0 +1,12 @@
+name: 'melody-build'
+
+jobs:
+	build:
+		runs-on: ubuntu-latest
+		permissions:
+			packages: write
+			content: read
+		steps:
+			-name: Build Image
+				run: |-
+					zip proto.zip shared-protobuf/proto-api/src/main/proto/test.proto
