@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "me.abdullahelzayany"
-version = "1.0-SNAPSHOT"
+version = "1.0-snapshot"
 
 publishing {
     repositories {
